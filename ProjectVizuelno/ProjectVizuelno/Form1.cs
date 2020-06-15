@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -204,24 +205,32 @@ namespace ProjectVizuelno
                     secondSelectedValue = "";
                     zaAnimiranje1 = box1;
                     zaAnimiranje2 = box2;
-                    zaAnimiranje.Height = 0;
-                    zaAnimiranje2.Height = 0;
-                    System.Threading.Thread.Sleep(500);
+
+
+                    var w = new Form() { Size = new Size(0, 0) };
+                    Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+                    MessageBox.Show(w, "Probaj nov par!", "");
                     timer2.Start();
-                    flag = false;
+                    
+                    flag = false; 
+                    
                     prvSelektiran = false;
+
                     return;
                 }
+                
             }
+            
             flag = true;
             firstSelectedValue = box1.Tag.ToString();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (zaAnimiranje.Height <= 0)
+            if (zaAnimiranje.Height == 0)
             {
                 timer1.Stop();
                 timer1.Dispose();
+                timer1.Enabled = false;
             }
             else
             {
@@ -231,12 +240,14 @@ namespace ProjectVizuelno
         private void timer2_Tick(object sender, EventArgs e)
         {
             
-            if (zaAnimiranje1.Height == 100 && zaAnimiranje2.Height == 100)
+            if (zaAnimiranje1.Height >= 100 && zaAnimiranje2.Height >= 100)
             {
                 timer2.Stop();
-                return;
+                timer2.Dispose();
+                timer2.Enabled = false;
+                
             }
-            else
+            else 
             {
                 zaAnimiranje1.Height += 10;
                 zaAnimiranje2.Height += 10;
