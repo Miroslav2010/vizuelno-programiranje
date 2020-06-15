@@ -1,0 +1,10 @@
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe.config
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csprojAssemblyReference.cache
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Form1.resources
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Properties.Resources.resources
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.CoreCompileInputs.cache
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
+C:\Users\miroslav\source\repos\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb
