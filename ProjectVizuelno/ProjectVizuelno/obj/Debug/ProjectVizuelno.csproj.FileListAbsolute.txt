@@ -17,3 +17,13 @@ C:\Users\miroslav\Downloads\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectViz
 C:\Users\miroslav\Downloads\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
 C:\Users\miroslav\Downloads\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
 C:\Users\miroslav\Downloads\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe.config
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csprojAssemblyReference.cache
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Form1.resources
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Properties.Resources.resources
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.CoreCompileInputs.cache
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
+C:\Users\Sava-PC\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb
