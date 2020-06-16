@@ -36,3 +36,14 @@ C:\Users\miroslav\Downloads\vizuelno-programiranje-master\ProjectVizuelno\Projec
 C:\Users\miroslav\Downloads\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
 C:\Users\miroslav\Downloads\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
 C:\Users\miroslav\Downloads\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csprojAssemblyReference.cache
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Form1.resources
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Properties.Resources.resources
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.CoreCompileInputs.cache
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe.config
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Start.resources
