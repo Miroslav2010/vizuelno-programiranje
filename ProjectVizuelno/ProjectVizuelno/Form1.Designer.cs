@@ -104,7 +104,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(135, 90);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(133, 123);
             this.pictureBox1.TabIndex = 0;
@@ -113,7 +113,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Location = new System.Drawing.Point(352, 90);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(133, 123);
             this.pictureBox2.TabIndex = 1;
@@ -122,7 +122,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Location = new System.Drawing.Point(555, 90);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(133, 123);
             this.pictureBox3.TabIndex = 2;
@@ -131,7 +131,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Location = new System.Drawing.Point(752, 90);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(133, 123);
             this.pictureBox4.TabIndex = 3;
@@ -140,7 +140,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Location = new System.Drawing.Point(135, 267);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(133, 123);
             this.pictureBox5.TabIndex = 7;
@@ -149,7 +149,7 @@
             // pictureBox6
             // 
             this.pictureBox6.Location = new System.Drawing.Point(352, 267);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(133, 123);
             this.pictureBox6.TabIndex = 6;
@@ -158,7 +158,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Location = new System.Drawing.Point(555, 267);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(133, 123);
             this.pictureBox7.TabIndex = 5;
@@ -167,7 +167,7 @@
             // pictureBox8
             // 
             this.pictureBox8.Location = new System.Drawing.Point(752, 267);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(133, 123);
             this.pictureBox8.TabIndex = 4;
@@ -176,7 +176,7 @@
             // pictureBox9
             // 
             this.pictureBox9.Location = new System.Drawing.Point(135, 450);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(133, 123);
             this.pictureBox9.TabIndex = 11;
@@ -185,7 +185,7 @@
             // pictureBox10
             // 
             this.pictureBox10.Location = new System.Drawing.Point(352, 450);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(133, 123);
             this.pictureBox10.TabIndex = 10;
@@ -194,7 +194,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Location = new System.Drawing.Point(555, 450);
-            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox11.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(133, 123);
             this.pictureBox11.TabIndex = 9;
@@ -203,7 +203,7 @@
             // pictureBox12
             // 
             this.pictureBox12.Location = new System.Drawing.Point(752, 450);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(133, 123);
             this.pictureBox12.TabIndex = 8;
@@ -212,7 +212,7 @@
             // pictureBox13
             // 
             this.pictureBox13.Location = new System.Drawing.Point(135, 636);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(133, 123);
             this.pictureBox13.TabIndex = 15;
@@ -221,7 +221,7 @@
             // pictureBox14
             // 
             this.pictureBox14.Location = new System.Drawing.Point(352, 636);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(133, 123);
             this.pictureBox14.TabIndex = 14;
@@ -230,7 +230,7 @@
             // pictureBox15
             // 
             this.pictureBox15.Location = new System.Drawing.Point(555, 636);
-            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox15.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox15.Name = "pictureBox15";
             this.pictureBox15.Size = new System.Drawing.Size(133, 123);
             this.pictureBox15.TabIndex = 13;
@@ -239,7 +239,7 @@
             // pictureBox16
             // 
             this.pictureBox16.Location = new System.Drawing.Point(752, 636);
-            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox16.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox16.Name = "pictureBox16";
             this.pictureBox16.Size = new System.Drawing.Size(133, 123);
             this.pictureBox16.TabIndex = 12;
@@ -248,7 +248,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(874, 804);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 28);
             this.button1.TabIndex = 16;
@@ -259,7 +259,7 @@
             // cover1
             // 
             this.cover1.Location = new System.Drawing.Point(135, 113);
-            this.cover1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover1.Margin = new System.Windows.Forms.Padding(4);
             this.cover1.Name = "cover1";
             this.cover1.Size = new System.Drawing.Size(133, 123);
             this.cover1.TabIndex = 17;
@@ -274,7 +274,7 @@
             // cover2
             // 
             this.cover2.Location = new System.Drawing.Point(352, 113);
-            this.cover2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover2.Margin = new System.Windows.Forms.Padding(4);
             this.cover2.Name = "cover2";
             this.cover2.Size = new System.Drawing.Size(133, 123);
             this.cover2.TabIndex = 18;
@@ -284,7 +284,7 @@
             // cover3
             // 
             this.cover3.Location = new System.Drawing.Point(555, 113);
-            this.cover3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover3.Margin = new System.Windows.Forms.Padding(4);
             this.cover3.Name = "cover3";
             this.cover3.Size = new System.Drawing.Size(133, 123);
             this.cover3.TabIndex = 19;
@@ -294,7 +294,7 @@
             // cover4
             // 
             this.cover4.Location = new System.Drawing.Point(752, 113);
-            this.cover4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover4.Margin = new System.Windows.Forms.Padding(4);
             this.cover4.Name = "cover4";
             this.cover4.Size = new System.Drawing.Size(133, 123);
             this.cover4.TabIndex = 20;
@@ -304,7 +304,7 @@
             // cover5
             // 
             this.cover5.Location = new System.Drawing.Point(135, 294);
-            this.cover5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover5.Margin = new System.Windows.Forms.Padding(4);
             this.cover5.Name = "cover5";
             this.cover5.Size = new System.Drawing.Size(133, 123);
             this.cover5.TabIndex = 21;
@@ -314,7 +314,7 @@
             // cover6
             // 
             this.cover6.Location = new System.Drawing.Point(352, 294);
-            this.cover6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover6.Margin = new System.Windows.Forms.Padding(4);
             this.cover6.Name = "cover6";
             this.cover6.Size = new System.Drawing.Size(133, 123);
             this.cover6.TabIndex = 22;
@@ -324,7 +324,7 @@
             // cover7
             // 
             this.cover7.Location = new System.Drawing.Point(555, 294);
-            this.cover7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover7.Margin = new System.Windows.Forms.Padding(4);
             this.cover7.Name = "cover7";
             this.cover7.Size = new System.Drawing.Size(133, 123);
             this.cover7.TabIndex = 23;
@@ -334,7 +334,7 @@
             // cover8
             // 
             this.cover8.Location = new System.Drawing.Point(752, 294);
-            this.cover8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover8.Margin = new System.Windows.Forms.Padding(4);
             this.cover8.Name = "cover8";
             this.cover8.Size = new System.Drawing.Size(133, 123);
             this.cover8.TabIndex = 24;
@@ -344,7 +344,7 @@
             // cover12
             // 
             this.cover12.Location = new System.Drawing.Point(752, 471);
-            this.cover12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover12.Margin = new System.Windows.Forms.Padding(4);
             this.cover12.Name = "cover12";
             this.cover12.Size = new System.Drawing.Size(133, 123);
             this.cover12.TabIndex = 28;
@@ -354,7 +354,7 @@
             // cover11
             // 
             this.cover11.Location = new System.Drawing.Point(555, 471);
-            this.cover11.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover11.Margin = new System.Windows.Forms.Padding(4);
             this.cover11.Name = "cover11";
             this.cover11.Size = new System.Drawing.Size(133, 123);
             this.cover11.TabIndex = 27;
@@ -364,7 +364,7 @@
             // cover10
             // 
             this.cover10.Location = new System.Drawing.Point(352, 471);
-            this.cover10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover10.Margin = new System.Windows.Forms.Padding(4);
             this.cover10.Name = "cover10";
             this.cover10.Size = new System.Drawing.Size(133, 123);
             this.cover10.TabIndex = 26;
@@ -374,7 +374,7 @@
             // cover9
             // 
             this.cover9.Location = new System.Drawing.Point(135, 471);
-            this.cover9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover9.Margin = new System.Windows.Forms.Padding(4);
             this.cover9.Name = "cover9";
             this.cover9.Size = new System.Drawing.Size(133, 123);
             this.cover9.TabIndex = 25;
@@ -384,7 +384,7 @@
             // cover16
             // 
             this.cover16.Location = new System.Drawing.Point(752, 668);
-            this.cover16.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover16.Margin = new System.Windows.Forms.Padding(4);
             this.cover16.Name = "cover16";
             this.cover16.Size = new System.Drawing.Size(133, 123);
             this.cover16.TabIndex = 32;
@@ -394,7 +394,7 @@
             // cover15
             // 
             this.cover15.Location = new System.Drawing.Point(555, 668);
-            this.cover15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover15.Margin = new System.Windows.Forms.Padding(4);
             this.cover15.Name = "cover15";
             this.cover15.Size = new System.Drawing.Size(133, 123);
             this.cover15.TabIndex = 31;
@@ -404,7 +404,7 @@
             // cover14
             // 
             this.cover14.Location = new System.Drawing.Point(352, 668);
-            this.cover14.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover14.Margin = new System.Windows.Forms.Padding(4);
             this.cover14.Name = "cover14";
             this.cover14.Size = new System.Drawing.Size(133, 123);
             this.cover14.TabIndex = 30;
@@ -414,7 +414,7 @@
             // cover13
             // 
             this.cover13.Location = new System.Drawing.Point(135, 668);
-            this.cover13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cover13.Margin = new System.Windows.Forms.Padding(4);
             this.cover13.Name = "cover13";
             this.cover13.Size = new System.Drawing.Size(133, 123);
             this.cover13.TabIndex = 29;
@@ -498,7 +498,7 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

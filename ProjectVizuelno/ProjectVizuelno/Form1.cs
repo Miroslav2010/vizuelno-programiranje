@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -70,7 +66,7 @@ namespace ProjectVizuelno
             listaCover.Add(cover8);
             listaCover.Add(cover9);
             listaCover.Add(cover10);
-            listaCover.Add(cover11); 
+            listaCover.Add(cover11);
             listaCover.Add(cover12);
             listaCover.Add(cover13);
             listaCover.Add(cover14);
@@ -93,20 +89,20 @@ namespace ProjectVizuelno
             lista.Add(pictureBox14);
             lista.Add(pictureBox15);
             lista.Add(pictureBox16);
-            foreach(var i in listaCover)
+            foreach (var i in listaCover)
             {
                 i.Height = 100;
             }
             int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
-            //x = Math.ceil(Math.random() * 16) % 8;
-            
+                                      //x = Math.ceil(Math.random() * 16) % 8;
+
             int[] pomosna = { 0, 0, 0, 0, 0, 0, 0, 0 }; //za proverka dali sekoja slika ima samo 2 pojavuvanja
             Random random = new Random();
             //pictureBox1.Load("../../Images/back.jpg");
-            for(int i = 0; i < 16; i++)
+            for (int i = 0; i < 16; i++)
             {
-                int x = random.Next(0,16) % 8; // generiranje random broj od 0 do 7
-                if(pomosna[x] < 2)
+                int x = random.Next(0, 16) % 8; // generiranje random broj od 0 do 7
+                if (pomosna[x] < 2)
                 {
                     pomosna[x]++; //se zabelezuva pojavuvanje
                     niza[i] = x; //odreduvanje slika za taa pozicija
@@ -117,11 +113,11 @@ namespace ProjectVizuelno
                 }
             }
             label3.Text = "";
-            for(int i = 0; i < 16; i++)
+            for (int i = 0; i < 16; i++)
             {
                 label3.Text += niza[i].ToString() + " ";
             }
-            for(int i = 0; i < 16; i++)
+            for (int i = 0; i < 16; i++)
             {
                 switch (niza[i])
                 {
@@ -169,7 +165,7 @@ namespace ProjectVizuelno
         }
         private void pictureBox17_Click(object sender, EventArgs e)
         {
-            
+
             if (!prvSelektiran) //prvicno e false
             {
                 prvSelektiran = true;
@@ -207,20 +203,28 @@ namespace ProjectVizuelno
                     zaAnimiranje2 = box2;
 
 
-                    var w = new Form() { Size = new Size(0, 0) };
-                    Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-                    MessageBox.Show(w, "Probaj nov par!", "");
-                    timer2.Start();
+                    var w = new Form() { Size = new Size(0, 0) }; 
+                    w.WindowState = FormWindowState.Minimized;
+              
+                    Task.Delay(TimeSpan.FromSeconds(0.7)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
                     
-                    flag = false; 
-                    
-                    prvSelektiran = false;
+                    Timer timer3 = new Timer();
 
+                    timer3.Interval = 1000;
+                    timer3.Enabled = true;
+                    w.ShowDialog();
+
+                    timer2.Start();
+
+                    flag = false;
+
+                    prvSelektiran = false;
+                   
                     return;
                 }
-                
+
             }
-            
+
             flag = true;
             firstSelectedValue = box1.Tag.ToString();
         }
@@ -239,15 +243,15 @@ namespace ProjectVizuelno
         }
         private void timer2_Tick(object sender, EventArgs e)
         {
-            
+
             if (zaAnimiranje1.Height >= 100 && zaAnimiranje2.Height >= 100)
             {
                 timer2.Stop();
                 timer2.Dispose();
                 timer2.Enabled = false;
-                
+
             }
-            else 
+            else
             {
                 zaAnimiranje1.Height += 10;
                 zaAnimiranje2.Height += 10;
