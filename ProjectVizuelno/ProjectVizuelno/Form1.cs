@@ -39,22 +39,7 @@ namespace ProjectVizuelno
             prvSelektiran = false;
             zaAnimiranje = null;
             zaAnimiranje2 = null;
-            cover1.Load("../../Images/back.jpg");
-            cover2.Load("../../Images/back.jpg");
-            cover3.Load("../../Images/back.jpg");
-            cover4.Load("../../Images/back.jpg");
-            cover5.Load("../../Images/back.jpg");
-            cover6.Load("../../Images/back.jpg");
-            cover7.Load("../../Images/back.jpg");
-            cover8.Load("../../Images/back.jpg");
-            cover9.Load("../../Images/back.jpg");
-            cover10.Load("../../Images/back.jpg");
-            cover11.Load("../../Images/back.jpg");
-            cover12.Load("../../Images/back.jpg");
-            cover13.Load("../../Images/back.jpg");
-            cover14.Load("../../Images/back.jpg");
-            cover15.Load("../../Images/back.jpg");
-            cover16.Load("../../Images/back.jpg");
+            
             List<PictureBox> listaCover = new List<PictureBox>(16);
             listaCover.Add(cover1);
             listaCover.Add(cover2);
@@ -91,6 +76,7 @@ namespace ProjectVizuelno
             lista.Add(pictureBox16);
             foreach (var i in listaCover)
             {
+                i.Load("../../Images/back.jpg");
                 i.Height = 100;
             }
             int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
@@ -206,7 +192,7 @@ namespace ProjectVizuelno
                     var w = new Form() { Size = new Size(0, 0) }; 
                     w.WindowState = FormWindowState.Minimized;
               
-                    Task.Delay(TimeSpan.FromSeconds(0.7)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+                    Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
                     
                     Timer timer3 = new Timer();
 
