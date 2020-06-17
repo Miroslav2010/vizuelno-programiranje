@@ -1,0 +1,4 @@
+dare 100
+miro 300
+sava 200
+petar 400

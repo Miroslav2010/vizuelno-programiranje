@@ -47,3 +47,4 @@ C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVi
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Start.resources
+C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.leaderboard.resources
