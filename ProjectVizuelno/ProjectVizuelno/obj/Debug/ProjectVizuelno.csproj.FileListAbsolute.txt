@@ -48,3 +48,14 @@ C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVi
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Start.resources
 C:\Users\darko\Desktop\vizuelno\vizuelno-programiranje\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.leaderboard.resources
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe.config
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.exe
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\bin\Debug\ProjectVizuelno.pdb
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csprojAssemblyReference.cache
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Form1.resources
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.leaderboard.resources
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Properties.Resources.resources
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.Start.resources
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.csproj.GenerateResource.cache
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.exe
+C:\Users\miroslav\Downloads\vizuelno-programiranje-master(1)\vizuelno-programiranje-master\ProjectVizuelno\ProjectVizuelno\obj\Debug\ProjectVizuelno.pdb

@@ -14,6 +14,7 @@ namespace ProjectVizuelno
 
     public partial class Start : Form
     {
+        public static int level;
         public Start()
         {
             InitializeComponent();
@@ -64,7 +65,7 @@ namespace ProjectVizuelno
             }
             else
             {
-                Form1 game = new Form1();
+                Form1 game = new Form1(level);
                 this.Hide();
                 game.ShowDialog();
                 this.Show();
@@ -74,6 +75,7 @@ namespace ProjectVizuelno
 
         private void button3_Click(object sender, EventArgs e) //difficulty button 1
         {
+            level = 1;
             tezina = true;
             button3.Enabled = false;
             reEnableButtons(button3);
@@ -82,6 +84,7 @@ namespace ProjectVizuelno
 
         private void button4_Click(object sender, EventArgs e) //difficulty button 2
         {
+            level = 2;
             tezina = true;
             button4.Enabled = false;
             reEnableButtons(button4);
@@ -90,6 +93,7 @@ namespace ProjectVizuelno
 
         private void button5_Click(object sender, EventArgs e) //difficulty button 3
         {
+            level = 3;
             tezina = true;
             button5.Enabled = false;
             reEnableButtons(button5);
@@ -98,6 +102,7 @@ namespace ProjectVizuelno
 
         private void button6_Click(object sender, EventArgs e) //difficulty button 4
         {
+            level = 4;
             tezina = true;
             button6.Enabled = false;
             reEnableButtons(button6);

@@ -99,7 +99,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="backCard.jpg" />
+    <None Include="Resources\backCard.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\beep.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\success.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

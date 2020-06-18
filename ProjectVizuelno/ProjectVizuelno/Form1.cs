@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -9,6 +10,7 @@ namespace ProjectVizuelno
 {
     public partial class Form1 : Form
     {
+        int level;
         PictureBox zaAnimiranje;
         PictureBox zaAnimiranje1;
         PictureBox zaAnimiranje2;
@@ -18,8 +20,9 @@ namespace ProjectVizuelno
         Boolean prvSelektiran;
         string firstSelectedValue;
         string secondSelectedValue;
-        public Form1()
+        public Form1(int level)
         {
+            this.level = level;
             InitializeComponent();
             zaAnimiranje = null;
             zaAnimiranje1 = null;
@@ -31,6 +34,19 @@ namespace ProjectVizuelno
         }
         private void Form1_Load(object sender, EventArgs e)
         {
+            if(level == 1)
+            {
+                timerMin.Text = "2";
+                timerSec.Text = "00";
+            }
+            if(level == 2)
+            {
+                timerMin.Text = "1";
+                timerSec.Text = "30";
+            }
+            pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             timer1.Stop();
             timer2.Stop();
             box1 = null;
@@ -39,7 +55,7 @@ namespace ProjectVizuelno
             prvSelektiran = false;
             zaAnimiranje = null;
             zaAnimiranje2 = null;
-            
+            timer3.Start();
             List<PictureBox> listaCover = new List<PictureBox>(16);
             listaCover.Add(cover1);
             listaCover.Add(cover2);
@@ -76,7 +92,7 @@ namespace ProjectVizuelno
             lista.Add(pictureBox16);
             foreach (var i in listaCover)
             {
-                i.Load("../../Images/back.jpg");
+                i.Load("../../Resources/backCard.jpg");
                 i.Height = 100;
             }
             int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
@@ -108,11 +124,11 @@ namespace ProjectVizuelno
                 switch (niza[i])
                 {
                     case 0:
-                        lista.ElementAt(i).Load("../../Images/facebook.png");
+                        lista.ElementAt(i).Load("../../Images/reddit.png");
                         listaCover.ElementAt(i).Tag = "0"; //Tag atributot na cover-ot ke go koristime za proverka dali ima pogodok na 2 isti sliki
                         break;
                     case 1:
-                        lista.ElementAt(i).Load("../../Images/android.jpg");
+                        lista.ElementAt(i).Load("../../Images/android.png");
                         listaCover.ElementAt(i).Tag = "1";
                         break;
                     case 2:
@@ -120,7 +136,7 @@ namespace ProjectVizuelno
                         listaCover.ElementAt(i).Tag = "2";
                         break;
                     case 3:
-                        lista.ElementAt(i).Load("../../Images/linux.png");
+                        lista.ElementAt(i).Load("../../Images/ubuntu.png");
                         listaCover.ElementAt(i).Tag = "3";
                         break;
                     case 4:
@@ -128,7 +144,7 @@ namespace ProjectVizuelno
                         listaCover.ElementAt(i).Tag = "4";
                         break;
                     case 5:
-                        lista.ElementAt(i).Load("../../Images/thunderbird.png");
+                        lista.ElementAt(i).Load("../../Images/github.png");
                         listaCover.ElementAt(i).Tag = "5";
                         break;
                     case 6:
@@ -136,7 +152,7 @@ namespace ProjectVizuelno
                         listaCover.ElementAt(i).Tag = "6";
                         break;
                     case 7:
-                        lista.ElementAt(i).Load("../../Images/windows.jpg");
+                        lista.ElementAt(i).Load("../../Images/windows.png");
                         listaCover.ElementAt(i).Tag = "7";
                         break;
                 }
@@ -175,6 +191,8 @@ namespace ProjectVizuelno
                 label2.Text = secondSelectedValue;
                 if (firstSelectedValue.Equals(secondSelectedValue))
                 {
+                    SoundPlayer sound = new SoundPlayer(Properties.Resources.success);
+                    sound.Play();
                     flag = false;
                     prvSelektiran = false;
                     firstSelectedValue = "";
@@ -187,25 +205,15 @@ namespace ProjectVizuelno
                     secondSelectedValue = "";
                     zaAnimiranje1 = box1;
                     zaAnimiranje2 = box2;
-
-
+                    SoundPlayer sound = new SoundPlayer(Properties.Resources.beep);
+                    sound.Play();
                     var w = new Form() { Size = new Size(0, 0) }; 
                     w.WindowState = FormWindowState.Minimized;
-              
                     Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
-                    
-                    Timer timer3 = new Timer();
-
-                    timer3.Interval = 1000;
-                    timer3.Enabled = true;
                     w.ShowDialog();
-
                     timer2.Start();
-
                     flag = false;
-
                     prvSelektiran = false;
-                   
                     return;
                 }
 
@@ -235,13 +243,97 @@ namespace ProjectVizuelno
                 timer2.Stop();
                 timer2.Dispose();
                 timer2.Enabled = false;
-
             }
             else
             {
                 zaAnimiranje1.Height += 10;
                 zaAnimiranje2.Height += 10;
             }
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void izgubiGame()
+        {
+            DialogResult dr = new DialogResult();
+            dr = MessageBox.Show("Обиди се повторно?","", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+                button1_Click(null, null);
+            else if (dr == DialogResult.No)
+                this.Close();
+        }
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            int min = Int32.Parse(timerMin.Text);
+            int sec = Int32.Parse(timerSec.Text);
+            sec--;
+            if(sec == -1 && min != 0)
+            {
+                min--;
+                sec = 59;
+            }
+            if (sec < 10)
+            {
+                timerSec.Text = "0" + sec.ToString();
+            }
+            else
+            {
+                timerSec.Text = sec.ToString();
+            }
+            timerMin.Text = min.ToString();
+            
+            if (sec == 0 && min == 0)
+            {
+                timer3.Stop();
+                izgubiGame();
+            }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
