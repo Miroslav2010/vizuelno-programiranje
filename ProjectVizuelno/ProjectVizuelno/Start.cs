@@ -63,11 +63,18 @@ namespace ProjectVizuelno
             {
                 MessageBox.Show("Вашето име е прекратко!", "Грешка", MessageBoxButtons.OK);
             }
-            else
+            else if(level==1 || level==2)
             {
                 Form1 game = new Form1(level);
                 this.Hide();
                 game.ShowDialog();
+                this.Show();
+            }
+            else if (level == 3 || level == 4)
+            {
+                Form2 game2 = new Form2(level);
+                this.Hide();
+                game2.ShowDialog();
                 this.Show();
             }
 

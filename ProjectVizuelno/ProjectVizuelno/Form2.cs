@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace ProjectVizuelno
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
         int level;
         PictureBox zaAnimiranje;
@@ -20,7 +20,7 @@ namespace ProjectVizuelno
         Boolean prvSelektiran;
         string firstSelectedValue;
         string secondSelectedValue;
-        public Form1(int level)
+        public Form2(int level)
         {
             this.level = level;
             InitializeComponent();
@@ -32,23 +32,26 @@ namespace ProjectVizuelno
             prvSelektiran = false;
             flag = false;
         }
+
+
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            if(level == 1)
-            {
-                timerMin.Text = "2";
-                timerSec.Text = "00";
-                levell.Text = "Level: " + level.ToString();
-                levelname.Text = "Easy";
-            }
-            if(level == 2)
+            if(level == 3)
             {
                 timerMin.Text = "0";
-                timerSec.Text = "20";
+                timerSec.Text = "10";
                 levell.Text = "Level: " + level.ToString();
-                levelname.Text = "Medium";
+                levelname.Text = "Hard";
             }
-            //pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
+            if(level == 4)
+            {
+                timerMin.Text = "1";
+                timerSec.Text = "30";
+                levell.Text = "Level: " + level.ToString();
+                levelname.Text = "Impossible";
+            }
+            //Finki.SizeMode = PictureBoxSizeMode.StretchImage;      // ne raboti so novata slika
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             timer1.Stop();
@@ -60,7 +63,7 @@ namespace ProjectVizuelno
             zaAnimiranje = null;
             zaAnimiranje2 = null;
             timer3.Start();
-            List<PictureBox> listaCover = new List<PictureBox>(16);
+            List<PictureBox> listaCover = new List<PictureBox>(24);
             listaCover.Add(cover1);
             listaCover.Add(cover2);
             listaCover.Add(cover3);
@@ -77,7 +80,15 @@ namespace ProjectVizuelno
             listaCover.Add(cover14);
             listaCover.Add(cover15);
             listaCover.Add(cover16);
-            List<PictureBox> lista = new List<PictureBox>(16);
+            listaCover.Add(cover17);
+            listaCover.Add(cover18);
+            listaCover.Add(cover19);
+            listaCover.Add(cover20);
+            listaCover.Add(cover21);
+            listaCover.Add(cover22);
+            listaCover.Add(cover23);
+            listaCover.Add(cover24);
+            List<PictureBox> lista = new List<PictureBox>(24);
             lista.Add(pictureBox1);
             lista.Add(pictureBox2);
             lista.Add(pictureBox3);
@@ -94,20 +105,28 @@ namespace ProjectVizuelno
             lista.Add(pictureBox14);
             lista.Add(pictureBox15);
             lista.Add(pictureBox16);
+            lista.Add(pictureBox17);
+            lista.Add(pictureBox18);
+            lista.Add(pictureBox19);
+            lista.Add(pictureBox20);
+            lista.Add(pictureBox21);
+            lista.Add(pictureBox22);
+            lista.Add(pictureBox23);
+            lista.Add(pictureBox24);
             foreach (var i in listaCover)
             {
                 i.Load("../../Resources/backCard.jpg");
                 i.Height = 100;
             }
-            int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
+            int[] niza = new int[24]; //za odreduvanje koja slika odi na koja pozicija
                                       //x = Math.ceil(Math.random() * 16) % 8;
 
-            int[] pomosna = { 0, 0, 0, 0, 0, 0, 0, 0 }; //za proverka dali sekoja slika ima samo 2 pojavuvanja
+            int[] pomosna = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0}; //za proverka dali sekoja slika ima samo 2 pojavuvanja
             Random random = new Random();
             //pictureBox1.Load("../../Images/back.jpg");
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 24; i++)
             {
-                int x = random.Next(0, 64) % 8; // generiranje random broj od 0 do 7
+                int x = random.Next(0, 48) % 12; // generiranje random broj od 0 do 7
                 if (pomosna[x] < 2)
                 {
                     pomosna[x]++; //se zabelezuva pojavuvanje
@@ -119,11 +138,11 @@ namespace ProjectVizuelno
                 }
             }
             label3.Text = "";
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 24; i++)
             {
                 label3.Text += niza[i].ToString() + " ";
             }
-            for (int i = 0; i < 16; i++)
+            for (int i = 0; i < 24; i++)
             {
                 switch (niza[i])
                 {
@@ -159,11 +178,35 @@ namespace ProjectVizuelno
                         lista.ElementAt(i).Load("../../Images/windows.png");
                         listaCover.ElementAt(i).Tag = "7";
                         break;
+                    case 8:
+                        lista.ElementAt(i).Load("../../Images/pinterest.png");
+                        listaCover.ElementAt(i).Tag = "8";
+                        break;
+                    case 9:
+                        lista.ElementAt(i).Load("../../Images/9gag.png");
+                        listaCover.ElementAt(i).Tag = "9";
+                        break;
+                    case 10:
+                        lista.ElementAt(i).Load("../../Images/twitch.png");
+                        listaCover.ElementAt(i).Tag = "10";
+                        break;
+                    case 11:
+                        lista.ElementAt(i).Load("../../Images/facebook.png");
+                        listaCover.ElementAt(i).Tag = "11";
+                        break;
+                    case 12:
+                        lista.ElementAt(i).Load("../../Images/opera.png");
+                        listaCover.ElementAt(i).Tag = "12";
+                        break;
+
                 }
                 lista.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
                 listaCover.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
             }
         }
+
+
+
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -184,6 +227,11 @@ namespace ProjectVizuelno
                 clicked(box2);
             }
         }
+
+
+
+
+
         private void clicked(PictureBox box)
         {
             zaAnimiranje = box;
@@ -205,12 +253,12 @@ namespace ProjectVizuelno
                 }
                 else
                 {
+                    SoundPlayer sound = new SoundPlayer(Properties.Resources.beep);
+                    sound.Play();
                     firstSelectedValue = "";
                     secondSelectedValue = "";
                     zaAnimiranje1 = box1;
                     zaAnimiranje2 = box2;
-                    SoundPlayer sound = new SoundPlayer(Properties.Resources.beep);
-                    sound.Play();
                     var w = new Form() { Size = new Size(0, 0) }; 
                     w.WindowState = FormWindowState.Minimized;
                     Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
@@ -226,6 +274,10 @@ namespace ProjectVizuelno
             flag = true;
             firstSelectedValue = box1.Tag.ToString();
         }
+
+
+
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (zaAnimiranje.Height == 0)
@@ -239,6 +291,11 @@ namespace ProjectVizuelno
                 zaAnimiranje.Height -= 10;
             }
         }
+
+
+
+
+
         private void timer2_Tick(object sender, EventArgs e)
         {
 
@@ -256,10 +313,15 @@ namespace ProjectVizuelno
         }
 
 
+
+
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
+
 
         private void izgubiGame()
         {
@@ -270,6 +332,9 @@ namespace ProjectVizuelno
             else if (dr == DialogResult.No)
                 this.Close();
         }
+
+
+
         private void timer3_Tick(object sender, EventArgs e)
         {
             int min = Int32.Parse(timerMin.Text);
@@ -289,7 +354,7 @@ namespace ProjectVizuelno
                 timerSec.Text = sec.ToString();
             }
             timerMin.Text = min.ToString();
-
+            
             if (sec == 0 && min == 0 && this.Visible == true)
             {
                 timer3.Stop();
@@ -305,5 +370,21 @@ namespace ProjectVizuelno
             }
         }
 
+        private void cover24_MouseHover(object sender, EventArgs e)
+        {
+            //Cursor.Current = Cursors.Hand;
+        }
+
+        private void cover24_MouseEnter(object sender, EventArgs e)
+        {
+            //Cursor.Current = Cursors.Hand; //ne raboti
+        }
+
+        private void cover24_MouseLeave(object sender, EventArgs e)
+        {
+            //Cursor.Current = Cursors.Default; // ne raboti
+        }
+
+        
     }
 }
