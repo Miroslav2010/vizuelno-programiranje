@@ -19,6 +19,10 @@ namespace ProjectVizuelno
         public Start()
         {
             InitializeComponent();
+            this.CenterToScreen();
+            /*this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false; */
             /*if (!(File.Exists("leaderboard.txt")))  // ENABLE THIS WHEN EVERYTHING ELSE IS DONE
             {
                 var newFile = File.Create("leaderboard.txt");
@@ -64,12 +68,17 @@ namespace ProjectVizuelno
             {
                 MessageBox.Show("Вашето име е прекратко!", "Грешка", MessageBoxButtons.OK);
             }
+            else if (textBox1.TextLength > 6)
+            {
+                MessageBox.Show("Вашето име е предолго. Максимум е 6 карактери!", "Грешка", MessageBoxButtons.OK);
+            }
             else if(level==1 || level==2)
             {
                 ime = textBox1.Text;
                 Form1 game = new Form1(level,ime);
                 this.Hide();
                 game.ShowDialog();
+                game.Dispose();
                 this.Show();
             }
             else if (level == 3 || level == 4)
@@ -78,6 +87,7 @@ namespace ProjectVizuelno
                 Form2 game2 = new Form2(level,ime);
                 this.Hide();
                 game2.ShowDialog();
+                game2.Dispose();
                 this.Show();
             }
 

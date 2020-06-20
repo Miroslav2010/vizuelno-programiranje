@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Media;
 using System.Threading.Tasks;
@@ -24,6 +25,10 @@ namespace ProjectVizuelno
         string secondSelectedValue;
         public Form2(int level,string ime)
         {
+            this.CenterToScreen();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.counter = 0;
             this.ime = ime;
             this.level = level;
@@ -56,8 +61,6 @@ namespace ProjectVizuelno
                 levelname.Text = "Impossible";
             }
             //Finki.SizeMode = PictureBoxSizeMode.StretchImage;      // ne raboti so novata slika
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
             timer1.Stop();
             timer2.Stop();
             box1 = null;
@@ -140,7 +143,7 @@ namespace ProjectVizuelno
                     i--; //vo slucaj da se pojavi treto pojavuvanje na broj da probame pak za istata pozicija
                     continue;
                 }
-                listaCover.ElementAt(i).Load("../../Resources/backCard.jpg");
+                listaCover.ElementAt(i).Load("../../Images/Cover.png");
                 listaCover.ElementAt(i).Height = 100;
                 switch (niza[i])
                 {
@@ -204,7 +207,12 @@ namespace ProjectVizuelno
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form1_Load(sender, e);
+            DialogResult result = MessageBox.Show("Дали сте сигурни дека сакате да ресетирате?", "Reset",MessageBoxButtons.YesNo);
+            if (result == DialogResult.Yes)
+            {
+                counter = 0;
+                Form1_Load(sender, e);
+            }
         }
         private void pictureBox17_Click(object sender, EventArgs e)
         {
@@ -246,8 +254,15 @@ namespace ProjectVizuelno
                     if (counter == 12)
                     {
                         timer3.Stop();
-                        MessageBox.Show("Честитки " + this.ime + ", победивте!"); // smenete tekstov na neso drugo
+                        MessageBox.Show("Честито " + this.ime + ", победивте!","Победа"); // smenete tekstov na neso drugo
                         // tuka se dodava high score vo leaderboard
+                        int min = Int32.Parse(timerMin.Text);
+                        int sec = Int32.Parse(timerSec.Text);
+                        var poeni = this.level * ((min * 60) + sec);
+                        using (StreamWriter sw = File.AppendText("../../leaderboard.txt"))
+                        {
+                            sw.WriteLine(this.ime + " " + poeni);
+                        }
                         this.Close();
                     }
                     return;
@@ -318,7 +333,9 @@ namespace ProjectVizuelno
 
         private void button2_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+                this.Close();
         }
 
 
@@ -386,6 +403,12 @@ namespace ProjectVizuelno
             //Cursor.Current = Cursors.Default; // ne raboti
         }
 
-        
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            timer3.Stop();
+            GC.Collect();
+        }
+
+
     }
 }
