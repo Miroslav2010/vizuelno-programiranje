@@ -172,11 +172,11 @@ namespace ProjectVizuelno
             GC.Collect();
         }
 
-        private void Start_FormClosing(object sender, FormClosingEventArgs e)
+        /*private void Start_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.Dispose();
             GC.Collect();
-        }
+        }*/
 
     }
 

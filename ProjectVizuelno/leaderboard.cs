@@ -22,7 +22,7 @@ namespace ProjectVizuelno
         private void updateLeaderBoard(string skip) // read leaderboard from txt file
         {
 
-            var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => x[1]).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
+            var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
             int i = 1;
             foreach (String line in lines)
             {
