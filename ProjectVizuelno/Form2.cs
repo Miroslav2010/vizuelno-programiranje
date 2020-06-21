@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace ProjectVizuelno
 {
+    
     public partial class Form2 : Form
     {
         int counter;
@@ -23,12 +24,12 @@ namespace ProjectVizuelno
         Boolean prvSelektiran;
         string firstSelectedValue;
         string secondSelectedValue;
+
         public Form2(int level,string ime)
         {
             this.CenterToScreen();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.counter = 0;
             this.ime = ime;
             this.level = level;
@@ -40,6 +41,8 @@ namespace ProjectVizuelno
             box2 = null;
             prvSelektiran = false;
             flag = false;
+            GC.Collect();
+           
         }
 
 
@@ -132,7 +135,7 @@ namespace ProjectVizuelno
             }*/
             for (int i = 0; i < 24; i++)
             {
-                int x = random.Next(0, 48) % 12; // generiranje random broj od 0 do 7
+                int x = random.Next(0, 48) % 12; // generiranje random broj od 0 do 11
                 if (pomosna[x] < 2)
                 {
                     pomosna[x]++; //se zabelezuva pojavuvanje
@@ -200,6 +203,7 @@ namespace ProjectVizuelno
                 lista.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
                 listaCover.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
             }
+            GC.Collect();
         }
 
 
@@ -263,7 +267,7 @@ namespace ProjectVizuelno
                         {
                             sw.WriteLine(this.ime + " " + poeni);
                         }
-                        this.Close();
+                        this.Dispose();
                     }
                     return;
                 }
@@ -335,7 +339,7 @@ namespace ProjectVizuelno
         {
             DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
-                this.Close();
+                this.Dispose();
         }
 
 
@@ -348,7 +352,7 @@ namespace ProjectVizuelno
             if (dr == DialogResult.Yes)
                 button1_Click(null, null);
             else if (dr == DialogResult.No)
-                this.Close();
+                this.Dispose();
         }
 
 
@@ -406,9 +410,18 @@ namespace ProjectVizuelno
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer3.Stop();
+            timer3.Dispose();
+            
             GC.Collect();
+            this.Dispose();
         }
 
-
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer3.Stop();
+            timer3.Dispose();
+            GC.Collect();
+            this.Dispose();
+        }
     }
 }

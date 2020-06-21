@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,10 +17,15 @@ namespace ProjectVizuelno
     {
         string ime;
         public static int level;
+        Form1 game1;
+        Form2 game2;
         public Start()
         {
             InitializeComponent();
             this.CenterToScreen();
+            GC.Collect();
+            Form1 game1 = new Form1(0,"");
+            Form2 game2 = new Form2(0,"");
             /*this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false; */
@@ -40,6 +46,7 @@ namespace ProjectVizuelno
                 if (!(bttn == skip) && bttn.Enabled == false)
                     bttn.Enabled = true;
             }
+            
         }
 
         private void button2_Click(object sender, EventArgs e) // leaderboards button
@@ -75,20 +82,46 @@ namespace ProjectVizuelno
             else if(level==1 || level==2)
             {
                 ime = textBox1.Text;
-                Form1 game = new Form1(level,ime);
-                this.Hide();
-                game.ShowDialog();
-                game.Dispose();
-                this.Show();
+                try
+                {
+                    this.Hide();
+                    game1 = new Form1(level, ime);
+                    game1.ShowDialog();
+                }
+
+                finally
+                {
+                    if (game1 != null)
+                    {
+                        game1.Dispose();
+                        game1 = null;
+                        this.Show();
+                    }
+                    GC.Collect();
+                }
+
             }
             else if (level == 3 || level == 4)
             {
                 ime = textBox1.Text;
-                Form2 game2 = new Form2(level,ime);
-                this.Hide();
-                game2.ShowDialog();
-                game2.Dispose();
+                try
+                {
+                    this.game2 = new Form2(level, ime);
+                    this.Hide();
+                    game2.ShowDialog();
+                }
+                finally
+                {
+                    if (game2 != null) { 
+                    game2.Dispose();
+                    game2 = null;
+                    this.Show();
+                    }
+                    GC.Collect();
+                }
                 this.Show();
+
+
             }
 
         }
@@ -133,6 +166,18 @@ namespace ProjectVizuelno
         {
             Application.Exit();
         }
+
+        private void Start_Load(object sender, EventArgs e)
+        {
+            GC.Collect();
+        }
+
+        private void Start_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Dispose();
+            GC.Collect();
+        }
+
     }
 
     class NoSelectButton : Button // klasa za kopcinja sto ne moze da se selektiraat (select fix)

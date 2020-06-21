@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
+//using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
-using System.Runtime.CompilerServices;
+//using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -29,7 +29,6 @@ namespace ProjectVizuelno
             this.CenterToScreen();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.counter = 0;
             this.ime = ime;
             this.level = level;
@@ -41,6 +40,7 @@ namespace ProjectVizuelno
             box2 = null;
             prvSelektiran = false;
             flag = false;
+            GC.Collect();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -165,6 +165,8 @@ namespace ProjectVizuelno
                 lista.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
                 listaCover.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
             }
+
+            GC.Collect();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -220,7 +222,7 @@ namespace ProjectVizuelno
                         {
                             sw.WriteLine(this.ime + " " + poeni);
                         }
-                        this.Close();
+                        this.Dispose();
                     }
                     return;
                 }
@@ -232,16 +234,15 @@ namespace ProjectVizuelno
                     zaAnimiranje2 = box2;
                     SoundPlayer sound = new SoundPlayer(Properties.Resources.beep);
                     sound.Play();
-                    var w = new Form() { Size = new Size(0, 0) }; 
+                    var w = new Form() {  }; 
                     w.WindowState = FormWindowState.Minimized;
-                    Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
+                    Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Dispose(), TaskScheduler.FromCurrentSynchronizationContext());
                     w.ShowDialog();
                     timer2.Start();
                     flag = false;
                     prvSelektiran = false;
                     return;
                 }
-
             }
 
             flag = true;
@@ -281,7 +282,7 @@ namespace ProjectVizuelno
         {
             DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
-                this.Close();
+                this.Dispose();
         }
 
         private void izgubiGame()
@@ -291,7 +292,7 @@ namespace ProjectVizuelno
             if (dr == DialogResult.Yes)
                 button1_Click(null, null);
             else if (dr == DialogResult.No)
-                this.Close();
+                this.Dispose();
         }
         private void timer3_Tick(object sender, EventArgs e)
         {
@@ -330,8 +331,18 @@ namespace ProjectVizuelno
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             timer3.Stop();
+            timer3.Dispose();
+            
             GC.Collect();
+            this.Dispose();
         }
 
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            timer3.Stop();
+            timer3.Dispose();
+            GC.Collect();
+            this.Dispose();
+        }
     }
 }
