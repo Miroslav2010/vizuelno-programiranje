@@ -146,56 +146,56 @@ namespace ProjectVizuelno
                     i--; //vo slucaj da se pojavi treto pojavuvanje na broj da probame pak za istata pozicija
                     continue;
                 }
-                listaCover.ElementAt(i).Load("../../Images/Cover.png");
+                listaCover.ElementAt(i).Load("../../Images/Cover-min.png");
                 listaCover.ElementAt(i).Height = 100;
                 switch (niza[i])
                 {
                     case 0:
-                        lista.ElementAt(i).Load("../../Images/reddit.png");
+                        lista.ElementAt(i).Load("../../Images/reddit-min.png");
                         listaCover.ElementAt(i).Tag = "0"; //Tag atributot na cover-ot ke go koristime za proverka dali ima pogodok na 2 isti sliki
                         break;
                     case 1:
-                        lista.ElementAt(i).Load("../../Images/android.png");
+                        lista.ElementAt(i).Load("../../Images/android-min.png");
                         listaCover.ElementAt(i).Tag = "1";
                         break;
                     case 2:
-                        lista.ElementAt(i).Load("../../Images/firefox.png");
+                        lista.ElementAt(i).Load("../../Images/firefox-min.png");
                         listaCover.ElementAt(i).Tag = "2";
                         break;
                     case 3:
-                        lista.ElementAt(i).Load("../../Images/ubuntu.png");
+                        lista.ElementAt(i).Load("../../Images/ubuntu-min.png");
                         listaCover.ElementAt(i).Tag = "3";
                         break;
                     case 4:
-                        lista.ElementAt(i).Load("../../Images/macOS.png");
+                        lista.ElementAt(i).Load("../../Images/macOS-min.png");
                         listaCover.ElementAt(i).Tag = "4";
                         break;
                     case 5:
-                        lista.ElementAt(i).Load("../../Images/github.png");
+                        lista.ElementAt(i).Load("../../Images/github-min.png");
                         listaCover.ElementAt(i).Tag = "5";
                         break;
                     case 6:
-                        lista.ElementAt(i).Load("../../Images/chrome.png");
+                        lista.ElementAt(i).Load("../../Images/chrome-min.png");
                         listaCover.ElementAt(i).Tag = "6";
                         break;
                     case 7:
-                        lista.ElementAt(i).Load("../../Images/windows.png");
+                        lista.ElementAt(i).Load("../../Images/windows-min.png");
                         listaCover.ElementAt(i).Tag = "7";
                         break;
                     case 8:
-                        lista.ElementAt(i).Load("../../Images/pinterest.png");
+                        lista.ElementAt(i).Load("../../Images/pinterest-min.png");
                         listaCover.ElementAt(i).Tag = "8";
                         break;
                     case 9:
-                        lista.ElementAt(i).Load("../../Images/9gag.png");
+                        lista.ElementAt(i).Load("../../Images/9gag-min.png");
                         listaCover.ElementAt(i).Tag = "9";
                         break;
                     case 10:
-                        lista.ElementAt(i).Load("../../Images/twitch.png");
+                        lista.ElementAt(i).Load("../../Images/twitch-min.png");
                         listaCover.ElementAt(i).Tag = "10";
                         break;
                     case 11:
-                        lista.ElementAt(i).Load("../../Images/facebook.png");
+                        lista.ElementAt(i).Load("../../Images/facebook-min.png");
                         listaCover.ElementAt(i).Tag = "11";
                         break;
 

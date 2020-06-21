@@ -86,7 +86,7 @@ namespace ProjectVizuelno
                 string del = listBox1.SelectedItem.ToString();
                 //Console.WriteLine(del);
                 listBox1.Items.Clear();
-                var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => x[1]).ThenBy(x => x[0]).Select(x => string.Join(" ", x)); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
+                var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x)); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                 File.Delete("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                 var newFile = File.Create("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                 newFile.Close();
