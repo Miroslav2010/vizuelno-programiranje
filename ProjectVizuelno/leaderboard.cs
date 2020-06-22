@@ -21,7 +21,6 @@ namespace ProjectVizuelno
 
         private void updateLeaderBoard(string skip) // read leaderboard from txt file
         {
-
             var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
             int i = 1;
             foreach (String line in lines)
@@ -36,8 +35,15 @@ namespace ProjectVizuelno
                         if (Char.IsUpper(ch))
                             bigL++;
                     } */
-                    listBox1.Items.Add(String.Format("{0} {1} {2}", i + ".\t", x[0].ToLower() + "\t\t\t", x[1]));
-                    //listBox1.Items.Add(i + ".\t" + x[0] + "\t\t\t" + x[1]);
+
+                    //listView1.Items.Add(String.Format("{0, -21} {1, -60} {2, -40}", i, x[0], x[1]));
+                    ListViewItem lvi = new ListViewItem(i.ToString());
+                    listView1.FullRowSelect = true;
+                    lvi.SubItems.Add(x[0]);
+                    lvi.SubItems.Add(x[1]);
+                    listView1.HideSelection = false;
+                    listView1.Items.Add(lvi);
+                    //listView1.Items.Add(i + ".\t" + x[0] + "\t\t\t" + x[1]);
                 }
                 i++;
             } 
@@ -56,7 +62,7 @@ namespace ProjectVizuelno
 
         private void button2_Click(object sender, EventArgs e) //reset button
         {
-            if (listBox1.Items.Count == 0) // proveri dali listata e prazna, ako e prikazi messagebox, ako ne resetiraj ja
+            if (listView1.Items.Count == 0) // proveri dali listata e prazna, ako e prikazi messagebox, ako ne resetiraj ja
             {
                 MessageBox.Show("Листата е празна!", "Грешка", MessageBoxButtons.OK);
             }
@@ -68,7 +74,7 @@ namespace ProjectVizuelno
                     File.Delete("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                     var newFile = File.Create("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                     newFile.Close();
-                    listBox1.Items.Clear();
+                    listView1.Items.Clear();
                     updateLeaderBoard("");
                 }
             }
@@ -77,15 +83,15 @@ namespace ProjectVizuelno
 
         private void button1_Click(object sender, EventArgs e) // izbrisi button
         {
-            if (listBox1.Items.Count == 0) // proveri dali listata e prazna
+            if (listView1.Items.Count == 0) // proveri dali listata e prazna
             {
                 MessageBox.Show("Листата е празна!", "Грешка", MessageBoxButtons.OK);
             }
-            else if (listBox1.SelectedIndex != -1) // ako ima izbrano sto da se izbrise, izbrisi go
+            else if (listView1.SelectedItems.Count != 0) // ako ima izbrano sto da se izbrise, izbrisi go
             {
-                string del = listBox1.SelectedItem.ToString();
-                //Console.WriteLine(del);
-                listBox1.Items.Clear();
+                string del = listView1.SelectedItems[0].SubItems[0].Text.ToString()+ ".\t" + listView1.SelectedItems[0].SubItems[1].Text.ToString() + "\t\t\t" + listView1.SelectedItems[0].SubItems[2].Text.ToString();
+                Console.WriteLine(del);
+                listView1.Items.Clear();
                 var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x)); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                 File.Delete("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
                 var newFile = File.Create("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
@@ -113,5 +119,9 @@ namespace ProjectVizuelno
             }
         }
 
+        private void leaderboard_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
