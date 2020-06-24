@@ -15,7 +15,6 @@ namespace ProjectVizuelno
             this.CenterToScreen();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             updateLeaderBoard("");
         }
 
@@ -28,22 +27,12 @@ namespace ProjectVizuelno
                 var x = line.Split(' ').ToArray();
                 if (!(line.Equals(skip)) && !(line.Equals("")))
                 {
-                    /*int bigL = 0;
-                    char[] charArr = x[0].ToCharArray();
-                    foreach(char ch in charArr)
-                    {
-                        if (Char.IsUpper(ch))
-                            bigL++;
-                    } */
-
-                    //listView1.Items.Add(String.Format("{0, -21} {1, -60} {2, -40}", i, x[0], x[1]));
                     ListViewItem lvi = new ListViewItem(i.ToString());
                     listView1.FullRowSelect = true;
                     lvi.SubItems.Add(x[0]);
                     lvi.SubItems.Add(x[1]);
                     listView1.HideSelection = false;
                     listView1.Items.Add(lvi);
-                    //listView1.Items.Add(i + ".\t" + x[0] + "\t\t\t" + x[1]);
                 }
                 i++;
             } 
@@ -71,8 +60,8 @@ namespace ProjectVizuelno
                 DialogResult result = MessageBox.Show("Дали сте сигурни дека сакате да ресетирате?", "Reset", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    File.Delete("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
-                    var newFile = File.Create("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
+                    File.Delete("../../leaderboard.txt");
+                    var newFile = File.Create("../../leaderboard.txt"); 
                     newFile.Close();
                     listView1.Items.Clear();
                     updateLeaderBoard("");
@@ -89,12 +78,11 @@ namespace ProjectVizuelno
             }
             else if (listView1.SelectedItems.Count != 0) // ako ima izbrano sto da se izbrise, izbrisi go
             {
-                string del = listView1.SelectedItems[0].SubItems[0].Text.ToString()+ ".\t" + listView1.SelectedItems[0].SubItems[1].Text.ToString() + "\t\t\t" + listView1.SelectedItems[0].SubItems[2].Text.ToString();
-                Console.WriteLine(del);
+                string del = listView1.SelectedItems[0].SubItems[0].Text.ToString()+ ". " + listView1.SelectedItems[0].SubItems[1].Text.ToString() + " " + listView1.SelectedItems[0].SubItems[2].Text.ToString();
                 listView1.Items.Clear();
-                var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x)); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
-                File.Delete("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
-                var newFile = File.Create("../../leaderboard.txt"); // REMOVE (../../) FROM PATH WHEN EVERYTHING ELSE IS DONE
+                var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
+                File.Delete("../../leaderboard.txt");
+                var newFile = File.Create("../../leaderboard.txt"); 
                 newFile.Close();
                 using (var output = new StreamWriter("../../leaderboard.txt")) 
                 {
@@ -102,7 +90,7 @@ namespace ProjectVizuelno
                     foreach (string line in lines)
                     {
                         var x = line.Split(' ');
-                        var lineX = String.Format("{0} {1} {2}", i + ".\t", x[0].ToLower() + "\t\t\t", x[1]);
+                        var lineX = String.Format(i + ". " + x[0] + " " + x[1]);
                         if (!(lineX.Equals(del)) && !(line.Equals("")))
                         {
                             output.WriteLine(line);

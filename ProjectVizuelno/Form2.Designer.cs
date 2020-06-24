@@ -292,9 +292,6 @@ namespace ProjectVizuelno
             this.cover1.TabIndex = 17;
             this.cover1.TabStop = false;
             this.cover1.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover1.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover1.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover1.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // timer1
             // 
@@ -310,9 +307,6 @@ namespace ProjectVizuelno
             this.cover2.TabIndex = 18;
             this.cover2.TabStop = false;
             this.cover2.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover2.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover2.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover2.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover3
             // 
@@ -323,9 +317,6 @@ namespace ProjectVizuelno
             this.cover3.TabIndex = 19;
             this.cover3.TabStop = false;
             this.cover3.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover3.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover3.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover3.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover4
             // 
@@ -336,9 +327,6 @@ namespace ProjectVizuelno
             this.cover4.TabIndex = 20;
             this.cover4.TabStop = false;
             this.cover4.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover4.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover4.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover4.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover5
             // 
@@ -349,9 +337,6 @@ namespace ProjectVizuelno
             this.cover5.TabIndex = 21;
             this.cover5.TabStop = false;
             this.cover5.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover5.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover5.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover5.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover6
             // 
@@ -362,9 +347,6 @@ namespace ProjectVizuelno
             this.cover6.TabIndex = 22;
             this.cover6.TabStop = false;
             this.cover6.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover6.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover6.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover6.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover7
             // 
@@ -375,9 +357,6 @@ namespace ProjectVizuelno
             this.cover7.TabIndex = 23;
             this.cover7.TabStop = false;
             this.cover7.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover7.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover7.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover7.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover8
             // 
@@ -388,9 +367,6 @@ namespace ProjectVizuelno
             this.cover8.TabIndex = 24;
             this.cover8.TabStop = false;
             this.cover8.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover8.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover8.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover8.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover12
             // 
@@ -401,9 +377,6 @@ namespace ProjectVizuelno
             this.cover12.TabIndex = 28;
             this.cover12.TabStop = false;
             this.cover12.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover12.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover12.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover12.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover11
             // 
@@ -414,9 +387,6 @@ namespace ProjectVizuelno
             this.cover11.TabIndex = 27;
             this.cover11.TabStop = false;
             this.cover11.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover11.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover11.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover11.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover10
             // 
@@ -427,9 +397,6 @@ namespace ProjectVizuelno
             this.cover10.TabIndex = 26;
             this.cover10.TabStop = false;
             this.cover10.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover10.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover10.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover10.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover9
             // 
@@ -440,9 +407,6 @@ namespace ProjectVizuelno
             this.cover9.TabIndex = 25;
             this.cover9.TabStop = false;
             this.cover9.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover9.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover9.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover9.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover16
             // 
@@ -453,9 +417,6 @@ namespace ProjectVizuelno
             this.cover16.TabIndex = 32;
             this.cover16.TabStop = false;
             this.cover16.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover16.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover16.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover16.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover15
             // 
@@ -466,9 +427,6 @@ namespace ProjectVizuelno
             this.cover15.TabIndex = 31;
             this.cover15.TabStop = false;
             this.cover15.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover15.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover15.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover15.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover14
             // 
@@ -479,9 +437,6 @@ namespace ProjectVizuelno
             this.cover14.TabIndex = 30;
             this.cover14.TabStop = false;
             this.cover14.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover14.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover14.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover14.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover13
             // 
@@ -492,9 +447,6 @@ namespace ProjectVizuelno
             this.cover13.TabIndex = 29;
             this.cover13.TabStop = false;
             this.cover13.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover13.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover13.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover13.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // timer2
             // 
@@ -575,9 +527,6 @@ namespace ProjectVizuelno
             this.cover20.TabIndex = 49;
             this.cover20.TabStop = false;
             this.cover20.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover20.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover20.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover20.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover19
             // 
@@ -588,9 +537,6 @@ namespace ProjectVizuelno
             this.cover19.TabIndex = 48;
             this.cover19.TabStop = false;
             this.cover19.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover19.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover19.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover19.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover18
             // 
@@ -601,9 +547,6 @@ namespace ProjectVizuelno
             this.cover18.TabIndex = 47;
             this.cover18.TabStop = false;
             this.cover18.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover18.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover18.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover18.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover17
             // 
@@ -614,9 +557,6 @@ namespace ProjectVizuelno
             this.cover17.TabIndex = 46;
             this.cover17.TabStop = false;
             this.cover17.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover17.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover17.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover17.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // pictureBox21
             // 
@@ -659,9 +599,6 @@ namespace ProjectVizuelno
             this.cover24.TabIndex = 57;
             this.cover24.TabStop = false;
             this.cover24.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover24.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover24.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover24.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover23
             // 
@@ -672,9 +609,6 @@ namespace ProjectVizuelno
             this.cover23.TabIndex = 56;
             this.cover23.TabStop = false;
             this.cover23.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover23.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover23.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover23.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover22
             // 
@@ -685,9 +619,6 @@ namespace ProjectVizuelno
             this.cover22.TabIndex = 55;
             this.cover22.TabStop = false;
             this.cover22.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover22.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover22.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover22.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // cover21
             // 
@@ -698,9 +629,6 @@ namespace ProjectVizuelno
             this.cover21.TabIndex = 54;
             this.cover21.TabStop = false;
             this.cover21.Click += new System.EventHandler(this.pictureBox17_Click);
-            this.cover21.MouseEnter += new System.EventHandler(this.cover24_MouseEnter);
-            this.cover21.MouseLeave += new System.EventHandler(this.cover24_MouseLeave);
-            this.cover21.MouseHover += new System.EventHandler(this.cover24_MouseHover);
             // 
             // pictureBox24
             // 

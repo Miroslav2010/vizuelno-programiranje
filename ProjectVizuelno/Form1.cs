@@ -58,7 +58,6 @@ namespace ProjectVizuelno
                 levell.Text = "Level: " + level.ToString();
                 levelname.Text = "Medium";
             }
-            //pictureBox17.SizeMode = PictureBoxSizeMode.StretchImage;
             timer1.Stop();
             timer2.Stop();
             box1 = null;
@@ -104,14 +103,9 @@ namespace ProjectVizuelno
             lista.Add(pictureBox16);
             int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
                                       //x = Math.ceil(Math.random() * 16) % 8;
-            //foreach(var i in listaCover)
             int[] pomosna = { 0, 0, 0, 0, 0, 0, 0, 0 }; //za proverka dali sekoja slika ima samo 2 pojavuvanja
             Random random = new Random();
-            //pictureBox1.Load("../../Images/back.jpg");
-            /*for (int i = 0; i < 16; i++)
-            {
-                
-            }*/
+
             for (int i = 0; i < 16; i++)
             {
                 int x = random.Next(0, 64) % 8; // generiranje random broj od 0 do 7
@@ -126,7 +120,7 @@ namespace ProjectVizuelno
                     continue;
                 }
                 listaCover.ElementAt(i).Load("../../Images/Cover-min.png");
-                listaCover.ElementAt(i).Height = 100;
+                listaCover.ElementAt(i).Height = 50;
                 switch (niza[i])
                 {
                     case 0:
@@ -213,14 +207,55 @@ namespace ProjectVizuelno
                     if (counter == 8)
                     {
                         timer3.Stop();
-                        MessageBox.Show("Честитки " + this.ime + ", победивте!"); // smenete tekstov na neso drugo
-                        // tuka se dodava high score vo leaderboard
                         int min = Int32.Parse(timerMin.Text);
                         int sec = Int32.Parse(timerSec.Text);
-                        var poeni = this.level * ((min * 60)+sec);
-                        using (StreamWriter sw = File.AppendText("../../leaderboard.txt"))
+                        var poeni = this.level * ((min * 60) + sec);
+                        MessageBox.Show("Честитки " + this.ime + ", победивте! Освоивте " + poeni + " поени.", "Победа");
+                        var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
+                        bool exists = false;
+                        bool higher = false;
+                        foreach (String line in lines)
                         {
-                            sw.WriteLine(this.ime + " " + poeni);
+                            var x = line.Split(' ').ToArray();
+                            if (x[0].Equals(this.ime))
+                            {
+                                if (Int32.Parse(x[1]) < poeni)
+                                    higher = true;
+                                exists = true;
+                                break;
+                            }
+                        }
+                        if (exists == true)
+                        {
+                            if (higher == true)
+                            {
+                                File.Delete("../../leaderboard.txt");
+                                var newFile = File.Create("../../leaderboard.txt");
+                                newFile.Close();
+                                using (var output = new StreamWriter("../../leaderboard.txt"))
+                                {
+                                    foreach (string line in lines)
+                                    {
+                                        var x = line.Split(' ');
+                                        if (!(x[0].Equals(this.ime)) && !(line.Equals("")))
+                                        {
+                                            output.WriteLine(line);
+                                        }
+                                    }
+                                    output.WriteLine(this.ime + " " + poeni);
+                                }
+                            }
+                            else
+                            {
+                                //do nothing
+                            }
+                        }
+                        else
+                        {
+                            using (StreamWriter sw = File.AppendText("../../leaderboard.txt"))
+                            {
+                                sw.WriteLine(this.ime + " " + poeni);
+                            }
                         }
                         this.Dispose();
                     }
@@ -332,7 +367,6 @@ namespace ProjectVizuelno
         {
             timer3.Stop();
             timer3.Dispose();
-            
             GC.Collect();
             this.Dispose();
         }
