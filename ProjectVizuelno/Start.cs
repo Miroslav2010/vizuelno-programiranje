@@ -28,9 +28,9 @@ namespace ProjectVizuelno
             GC.Collect();
             Form1 game1 = new Form1(0,"");
             Form2 game2 = new Form2(0,"");
-            if (!(File.Exists("leaderboard.txt"))) 
+            if (!(File.Exists("../../leaderboard.csv"))) 
             {
-                var newFile = File.Create("leaderboard.txt");
+                var newFile = File.Create("../../leaderboard.csv");
                 newFile.Close();
             } 
         }
