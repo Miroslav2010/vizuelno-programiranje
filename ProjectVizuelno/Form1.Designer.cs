@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -46,7 +45,7 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1 = new ProjectVizuelno.NoSelectButton();
             this.cover1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cover2 = new System.Windows.Forms.PictureBox();
@@ -66,7 +65,7 @@
             this.cover13 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button2 = new ProjectVizuelno.NoSelectButton();
             this.label4 = new System.Windows.Forms.Label();
             this.timerSec = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -421,7 +420,7 @@
             // 
             // pictureBox17
             // 
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
+            this.pictureBox17.Image = global::ProjectVizuelno.Properties.Resources.Logo_FINKI_UKIM_MK;
             this.pictureBox17.Location = new System.Drawing.Point(55, 12);
             this.pictureBox17.Name = "pictureBox17";
             this.pictureBox17.Size = new System.Drawing.Size(352, 56);
@@ -445,7 +444,7 @@
             this.label4.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(655, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 49);
+            this.label4.Size = new System.Drawing.Size(107, 40);
             this.label4.TabIndex = 38;
             this.label4.Text = "Time: ";
             // 
@@ -455,7 +454,7 @@
             this.timerSec.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerSec.Location = new System.Drawing.Point(854, 11);
             this.timerSec.Name = "timerSec";
-            this.timerSec.Size = new System.Drawing.Size(68, 49);
+            this.timerSec.Size = new System.Drawing.Size(55, 40);
             this.timerSec.TabIndex = 39;
             this.timerSec.Text = "20";
             // 
@@ -470,7 +469,7 @@
             this.timerMin.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerMin.Location = new System.Drawing.Point(780, 11);
             this.timerMin.Name = "timerMin";
-            this.timerMin.Size = new System.Drawing.Size(45, 49);
+            this.timerMin.Size = new System.Drawing.Size(36, 40);
             this.timerMin.TabIndex = 40;
             this.timerMin.Text = "0";
             // 
@@ -480,7 +479,7 @@
             this.label5.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(822, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 49);
+            this.label5.Size = new System.Drawing.Size(26, 40);
             this.label5.TabIndex = 41;
             this.label5.Text = ":";
             // 
@@ -490,7 +489,7 @@
             this.levelname.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelname.Location = new System.Drawing.Point(30, 587);
             this.levelname.Name = "levelname";
-            this.levelname.Size = new System.Drawing.Size(0, 28);
+            this.levelname.Size = new System.Drawing.Size(0, 22);
             this.levelname.TabIndex = 62;
             // 
             // levell
@@ -499,7 +498,7 @@
             this.levell.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levell.Location = new System.Drawing.Point(31, 541);
             this.levell.Name = "levell";
-            this.levell.Size = new System.Drawing.Size(79, 28);
+            this.levell.Size = new System.Drawing.Size(62, 22);
             this.levell.TabIndex = 61;
             this.levell.Text = "Level: ";
             // 
@@ -509,13 +508,13 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(33, 564);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(123, 16);
+            this.label6.Size = new System.Drawing.Size(97, 12);
             this.label6.TabIndex = 63;
             this.label6.Text = "_______________________";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1019, 663);
@@ -643,8 +642,6 @@
         private System.Windows.Forms.PictureBox cover13;
         private System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label timerSec;
         private System.Windows.Forms.Timer timer3;
@@ -653,6 +650,8 @@
         private System.Windows.Forms.Label levelname;
         private System.Windows.Forms.Label levell;
         private System.Windows.Forms.Label label6;
+        private NoSelectButton button1;
+        private NoSelectButton button2;
     }
 }
 

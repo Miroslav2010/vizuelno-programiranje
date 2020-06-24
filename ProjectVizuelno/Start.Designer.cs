@@ -31,10 +31,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new ProjectVizuelno.NoSelectButton();
+            this.button2 = new ProjectVizuelno.NoSelectButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.button7 = new ProjectVizuelno.NoSelectButton();
             this.button6 = new ProjectVizuelno.NoSelectButton();
             this.button5 = new ProjectVizuelno.NoSelectButton();
             this.button4 = new ProjectVizuelno.NoSelectButton();

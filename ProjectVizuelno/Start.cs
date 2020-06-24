@@ -28,7 +28,7 @@ namespace ProjectVizuelno
             GC.Collect();
             Form1 game1 = new Form1(0,"");
             Form2 game2 = new Form2(0,"");
-            if (!(File.Exists("leaderboard.txt")))  // ENABLE THIS WHEN EVERYTHING ELSE IS DONE
+            if (!(File.Exists("leaderboard.txt"))) 
             {
                 var newFile = File.Create("leaderboard.txt");
                 newFile.Close();
@@ -50,12 +50,20 @@ namespace ProjectVizuelno
 
         private void button2_Click(object sender, EventArgs e) // leaderboards button
         {
-            //MessageBox.Show("Not implemented yet!", "Implementation Error", MessageBoxButtons.OK);
-            leaderboard lb = new leaderboard();
-            this.Hide();
-            lb.ShowDialog();
-            this.Show();
-
+            if (textBox1.Text != null)
+            {
+                leaderboard lb = new leaderboard(textBox1.Text);
+                this.Hide();
+                lb.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                leaderboard lb = new leaderboard(" ");
+                this.Hide();
+                lb.ShowDialog();
+                this.Show();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e) // "zapocni" button
@@ -73,6 +81,14 @@ namespace ProjectVizuelno
             else if (textBox1.TextLength <=2)
             {
                 MessageBox.Show("Вашето име е прекратко!", "Грешка", MessageBoxButtons.OK);
+            }
+            else if (textBox1.TextLength > 20)
+            {
+                MessageBox.Show("Вашето име е предолго! (Максимум 20 карактери)", "Грешка", MessageBoxButtons.OK);
+            }
+            else if (textBox1.Text.Contains(","))
+            {
+                MessageBox.Show("Не смее да има запирка во вашето име!", "Грешка", MessageBoxButtons.OK);
             }
             else if(level==1 || level==2)
             {
@@ -166,12 +182,6 @@ namespace ProjectVizuelno
         {
             GC.Collect();
         }
-
-        /*private void Start_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            this.Dispose();
-            GC.Collect();
-        }*/
 
     }
 

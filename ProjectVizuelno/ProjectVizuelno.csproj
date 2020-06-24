@@ -114,6 +114,7 @@
     <None Include="Resources\beep.wav" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Images\Logo_FINKI_UKIM_MK.jpg" />
     <Content Include="Resources\success.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

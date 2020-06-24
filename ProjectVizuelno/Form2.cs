@@ -141,7 +141,7 @@ namespace ProjectVizuelno
                     continue;
                 }
                 listaCover.ElementAt(i).Load("../../Images/Cover-min.png");
-                listaCover.ElementAt(i).Height = 50;
+                listaCover.ElementAt(i).Height = 100;
                 switch (niza[i])
                 {
                     case 0:
@@ -256,7 +256,7 @@ namespace ProjectVizuelno
                         int sec = Int32.Parse(timerSec.Text);
                         var poeni = this.level * ((min * 60) + sec);
                         MessageBox.Show("Честитки " + this.ime + ", победивте! Освоивте " + poeni + " поени.", "Победа");
-                        var lines = File.ReadAllLines("../../leaderboard.txt").Select(x => x.Split(' ').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
+                        var lines = File.ReadAllLines("../../leaderboard.csv").Select(x => x.Split(',').ToArray()).OrderByDescending(x => Int32.Parse(x[1])).ThenBy(x => x[0]).Select(x => string.Join(" ", x));
                         bool exists = false;
                         bool higher = false;
                         foreach (String line in lines)
@@ -274,20 +274,20 @@ namespace ProjectVizuelno
                         {
                             if (higher == true)
                             {
-                                File.Delete("../../leaderboard.txt");
-                                var newFile = File.Create("../../leaderboard.txt");
+                                File.Delete("../../leaderboard.csv");
+                                var newFile = File.Create("../../leaderboard.csv");
                                 newFile.Close();
-                                using (var output = new StreamWriter("../../leaderboard.txt"))
+                                using (var output = new StreamWriter("../../leaderboard.csv"))
                                 {
                                     foreach (string line in lines)
                                     {
                                         var x = line.Split(' ');
                                         if (!(x[0].Equals(this.ime)) && !(line.Equals("")))
                                         {
-                                            output.WriteLine(line);
+                                            output.WriteLine(x[0] + "," + x[1]);
                                         }
                                     }
-                                    output.WriteLine(this.ime + " " + poeni);
+                                    output.WriteLine(this.ime + "," + poeni);
                                 }
                             }
                             else
@@ -297,9 +297,9 @@ namespace ProjectVizuelno
                         }
                         else
                         {
-                            using (StreamWriter sw = File.AppendText("../../leaderboard.txt"))
+                            using (StreamWriter sw = File.AppendText("../../leaderboard.csv"))
                             {
-                                sw.WriteLine(this.ime + " " + poeni);
+                                sw.WriteLine(this.ime + "," + poeni);
                             }
                         }
                         this.Dispose();
