@@ -26,13 +26,14 @@ namespace ProjectVizuelno
         string secondSelectedValue;
         public Form1(int level,string ime) // prateni level i ime od Start forma-ta
         {
-            this.CenterToScreen();
+            InitializeComponent();
+
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.counter = 0;
             this.ime = ime;
             this.level = level;
-            InitializeComponent();
+            
             zaAnimiranje = null;
             zaAnimiranje1 = null;
             zaAnimiranje2 = null;
@@ -58,6 +59,8 @@ namespace ProjectVizuelno
                 levell.Text = "Level: " + level.ToString();
                 levelname.Text = "Medium";
             }
+
+            this.Text = "Меморија - ниво " + level + " - " + levelname.Text;
             timer1.Stop();
             timer2.Stop();
             box1 = null;
@@ -67,6 +70,7 @@ namespace ProjectVizuelno
             zaAnimiranje = null;
             zaAnimiranje2 = null;
             timer3.Start();
+
             List<PictureBox> listaCover = new List<PictureBox>(16);
             listaCover.Add(cover1);
             listaCover.Add(cover2);
@@ -84,6 +88,7 @@ namespace ProjectVizuelno
             listaCover.Add(cover14);
             listaCover.Add(cover15);
             listaCover.Add(cover16);
+
             List<PictureBox> lista = new List<PictureBox>(16);
             lista.Add(pictureBox1);
             lista.Add(pictureBox2);
@@ -100,9 +105,10 @@ namespace ProjectVizuelno
             lista.Add(pictureBox13);
             lista.Add(pictureBox14);
             lista.Add(pictureBox15);
-            lista.Add(pictureBox16);
+            lista.Add(pictureBox16); 
+            
             int[] niza = new int[16]; //za odreduvanje koja slika odi na koja pozicija
-                                      //x = Math.ceil(Math.random() * 16) % 8;
+                                    
             int[] pomosna = { 0, 0, 0, 0, 0, 0, 0, 0 }; //za proverka dali sekoja slika ima samo 2 pojavuvanja
             Random random = new Random();
 
@@ -119,6 +125,7 @@ namespace ProjectVizuelno
                     i--; //vo slucaj da se pojavi treto pojavuvanje na broj da probame pak za istata pozicija
                     continue;
                 }
+                
                 listaCover.ElementAt(i).Load("../../Images/Cover-min.png");
                 listaCover.ElementAt(i).Height = 100;
                 switch (niza[i])
@@ -159,17 +166,22 @@ namespace ProjectVizuelno
                 lista.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
                 listaCover.ElementAt(i).SizeMode = PictureBoxSizeMode.StretchImage;
             }
-
             GC.Collect();
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            timer3.Enabled = false;
             DialogResult result = MessageBox.Show("Дали сте сигурни дека сакате да ресетирате?", "Reset", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 counter = 0;
                 Form1_Load(sender, e);
+            }
+            else
+            {
+                timer3.Enabled = true;
             }
         }
         private void pictureBox17_Click(object sender, EventArgs e)
@@ -293,6 +305,7 @@ namespace ProjectVizuelno
             }
             else
             {
+
                 zaAnimiranje.Height -= 10;
             }
         }
@@ -315,9 +328,7 @@ namespace ProjectVizuelno
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
-                this.Dispose();
+            this.Close();
         }
 
         private void izgubiGame()
@@ -325,14 +336,17 @@ namespace ProjectVizuelno
             DialogResult dr = new DialogResult();
             dr = MessageBox.Show("Обиди се повторно?","", MessageBoxButtons.YesNo);
             if (dr == DialogResult.Yes)
-                button1_Click(null, null);
+                Form1_Load(null, null);
             else if (dr == DialogResult.No)
                 this.Dispose();
         }
+
         private void timer3_Tick(object sender, EventArgs e)
         {
+            
             int min = Int32.Parse(timerMin.Text);
             int sec = Int32.Parse(timerSec.Text);
+
             sec--;
             if(sec == -1 && min != 0)
             {
@@ -349,34 +363,30 @@ namespace ProjectVizuelno
             }
             timerMin.Text = min.ToString();
 
-            if (sec == 0 && min == 0 && this.Visible == true)
+            if (sec <= 0 && min <= 0)
             {
                 timer3.Stop();
                 timer3.Dispose();
                 timer3.Enabled = false;
                 izgubiGame();
             }
-            else if (sec == 0 && min == 0)
-            {
-                timer3.Stop();
-                timer3.Dispose();
-                timer3.Enabled = false;
-            }
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer3.Stop();
-            timer3.Dispose();
-            GC.Collect();
-            this.Dispose();
-        }
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            timer3.Stop();
-            timer3.Dispose();
-            GC.Collect();
-            this.Dispose();
+            timer3.Enabled = false;
+            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                timer3.Stop();
+                timer3.Dispose();
+                GC.Collect();
+                this.Dispose();
+            }
+            else
+            {
+                timer3.Enabled = true;
+                e.Cancel = true;
+            }
         }
     }
 }

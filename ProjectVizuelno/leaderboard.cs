@@ -64,7 +64,6 @@ namespace ProjectVizuelno
                     var newFile = File.Create("../../leaderboard.csv"); 
                     newFile.Close();
                     listView1.Items.Clear();
-                    updateLeaderBoard();
                 }
             }
             

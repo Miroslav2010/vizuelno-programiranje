@@ -27,13 +27,12 @@ namespace ProjectVizuelno
 
         public Form2(int level,string ime)
         {
-            this.CenterToScreen();
+            InitializeComponent();
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.counter = 0;
             this.ime = ime;
             this.level = level;
-            InitializeComponent();
             zaAnimiranje = null;
             zaAnimiranje1 = null;
             zaAnimiranje2 = null;
@@ -63,6 +62,8 @@ namespace ProjectVizuelno
                 levell.Text = "Level: " + level.ToString();
                 levelname.Text = "Impossible";
             }
+
+            this.Text = "Меморија - ниво " + level + " - " + levelname.Text;
             timer1.Stop();
             timer2.Stop();
             box1 = null;
@@ -205,11 +206,16 @@ namespace ProjectVizuelno
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Дали сте сигурни дека сакате да ресетирате?", "Reset",MessageBoxButtons.YesNo);
+            timer3.Enabled = false;
+            DialogResult result = MessageBox.Show("Дали сте сигурни дека сакате да ресетирате?", "Reset", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 counter = 0;
                 Form1_Load(sender, e);
+            }
+            else
+            {
+                timer3.Enabled = true;
             }
         }
         private void pictureBox17_Click(object sender, EventArgs e)
@@ -227,9 +233,6 @@ namespace ProjectVizuelno
                 clicked(box2);
             }
         }
-
-
-
 
 
         private void clicked(PictureBox box)
@@ -314,8 +317,7 @@ namespace ProjectVizuelno
                     secondSelectedValue = "";
                     zaAnimiranje1 = box1;
                     zaAnimiranje2 = box2;
-                    var w = new Form() { Size = new Size(0, 0) }; 
-                    w.WindowState = FormWindowState.Minimized;
+                    var w = new Form() { Size = new Size(0, 0), WindowState = FormWindowState.Minimized};
                     Task.Delay(TimeSpan.FromSeconds(1)).ContinueWith((t) => w.Close(), TaskScheduler.FromCurrentSynchronizationContext());
                     w.ShowDialog();
                     timer2.Start();
@@ -325,7 +327,7 @@ namespace ProjectVizuelno
                 }
 
             }
-
+            
             flag = true;
             firstSelectedValue = box1.Tag.ToString();
         }
@@ -372,9 +374,9 @@ namespace ProjectVizuelno
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
-                this.Dispose();
+            
+                this.Close();
+           
         }
 
 
@@ -402,45 +404,40 @@ namespace ProjectVizuelno
                 min--;
                 sec = 59;
             }
+
             if (sec < 10)
-            {
                 timerSec.Text = "0" + sec.ToString();
-            }
             else
-            {
                 timerSec.Text = sec.ToString();
-            }
+
+
             timerMin.Text = min.ToString();
             
-            if (sec == 0 && min == 0 && this.Visible == true)
+            if (sec == 0 && min == 0)
             {
                 timer3.Stop();
                 timer3.Dispose();
                 timer3.Enabled = false;
                 izgubiGame();
             }
-            else if (sec == 0 && min == 0)
-            {
-                timer3.Stop();
-                timer3.Dispose();
-                timer3.Enabled = false;
-            }
         }
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer3.Stop();
-            timer3.Dispose();
-            GC.Collect();
-            this.Dispose();
-        }
-
-        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            timer3.Stop();
-            timer3.Dispose();
-            GC.Collect();
-            this.Dispose();
+            timer3.Enabled = false;
+            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
+            if (dr == DialogResult.Yes)
+            {
+                timer3.Stop();
+                timer3.Dispose();
+                GC.Collect();
+                this.Dispose();
+            }
+            else
+            {
+                timer3.Enabled = true;
+                e.Cancel = true;
+            }
         }
     }
 }

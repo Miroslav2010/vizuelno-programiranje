@@ -45,7 +45,6 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.button1 = new ProjectVizuelno.NoSelectButton();
             this.cover1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.cover2 = new System.Windows.Forms.PictureBox();
@@ -65,7 +64,6 @@
             this.cover13 = new System.Windows.Forms.PictureBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.button2 = new ProjectVizuelno.NoSelectButton();
             this.label4 = new System.Windows.Forms.Label();
             this.timerSec = new System.Windows.Forms.Label();
             this.timer3 = new System.Windows.Forms.Timer(this.components);
@@ -74,6 +72,8 @@
             this.levelname = new System.Windows.Forms.Label();
             this.levell = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new ProjectVizuelno.NoSelectButton();
+            this.button1 = new ProjectVizuelno.NoSelectButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -236,17 +236,6 @@
             this.pictureBox16.Size = new System.Drawing.Size(100, 93);
             this.pictureBox16.TabIndex = 12;
             this.pictureBox16.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(841, 481);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 49);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // cover1
             // 
@@ -427,24 +416,13 @@
             this.pictureBox17.TabIndex = 36;
             this.pictureBox17.TabStop = false;
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(841, 569);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 49);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Назад";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(655, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 40);
+            this.label4.Size = new System.Drawing.Size(134, 49);
             this.label4.TabIndex = 38;
             this.label4.Text = "Time: ";
             // 
@@ -454,7 +432,7 @@
             this.timerSec.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerSec.Location = new System.Drawing.Point(854, 11);
             this.timerSec.Name = "timerSec";
-            this.timerSec.Size = new System.Drawing.Size(55, 40);
+            this.timerSec.Size = new System.Drawing.Size(68, 49);
             this.timerSec.TabIndex = 39;
             this.timerSec.Text = "20";
             // 
@@ -469,7 +447,7 @@
             this.timerMin.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerMin.Location = new System.Drawing.Point(780, 11);
             this.timerMin.Name = "timerMin";
-            this.timerMin.Size = new System.Drawing.Size(36, 40);
+            this.timerMin.Size = new System.Drawing.Size(45, 49);
             this.timerMin.TabIndex = 40;
             this.timerMin.Text = "0";
             // 
@@ -479,7 +457,7 @@
             this.label5.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(822, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 40);
+            this.label5.Size = new System.Drawing.Size(33, 49);
             this.label5.TabIndex = 41;
             this.label5.Text = ":";
             // 
@@ -489,7 +467,7 @@
             this.levelname.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelname.Location = new System.Drawing.Point(30, 587);
             this.levelname.Name = "levelname";
-            this.levelname.Size = new System.Drawing.Size(0, 22);
+            this.levelname.Size = new System.Drawing.Size(0, 28);
             this.levelname.TabIndex = 62;
             // 
             // levell
@@ -498,7 +476,7 @@
             this.levell.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levell.Location = new System.Drawing.Point(31, 541);
             this.levell.Name = "levell";
-            this.levell.Size = new System.Drawing.Size(62, 22);
+            this.levell.Size = new System.Drawing.Size(79, 28);
             this.levell.TabIndex = 61;
             this.levell.Text = "Level: ";
             // 
@@ -508,13 +486,35 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(33, 564);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 12);
+            this.label6.Size = new System.Drawing.Size(123, 16);
             this.label6.TabIndex = 63;
             this.label6.Text = "_______________________";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(841, 569);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(133, 49);
+            this.button2.TabIndex = 37;
+            this.button2.Text = "Назад";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Cambria", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(841, 481);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 49);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1019, 663);
@@ -563,9 +563,8 @@
             this.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Меморија";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

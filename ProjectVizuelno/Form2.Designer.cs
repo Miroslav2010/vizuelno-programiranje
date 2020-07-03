@@ -478,7 +478,7 @@ namespace ProjectVizuelno
             this.label4.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(655, 11);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(107, 40);
+            this.label4.Size = new System.Drawing.Size(134, 49);
             this.label4.TabIndex = 38;
             this.label4.Text = "Time: ";
             // 
@@ -488,7 +488,7 @@ namespace ProjectVizuelno
             this.timerSec.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerSec.Location = new System.Drawing.Point(854, 11);
             this.timerSec.Name = "timerSec";
-            this.timerSec.Size = new System.Drawing.Size(55, 40);
+            this.timerSec.Size = new System.Drawing.Size(68, 49);
             this.timerSec.TabIndex = 39;
             this.timerSec.Text = "20";
             // 
@@ -503,7 +503,7 @@ namespace ProjectVizuelno
             this.timerMin.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timerMin.Location = new System.Drawing.Point(780, 11);
             this.timerMin.Name = "timerMin";
-            this.timerMin.Size = new System.Drawing.Size(36, 40);
+            this.timerMin.Size = new System.Drawing.Size(45, 49);
             this.timerMin.TabIndex = 40;
             this.timerMin.Text = "0";
             // 
@@ -513,7 +513,7 @@ namespace ProjectVizuelno
             this.label5.Font = new System.Drawing.Font("Cambria", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(822, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 40);
+            this.label5.Size = new System.Drawing.Size(33, 49);
             this.label5.TabIndex = 41;
             this.label5.Text = ":";
             // 
@@ -667,7 +667,7 @@ namespace ProjectVizuelno
             this.levell.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levell.Location = new System.Drawing.Point(13, 552);
             this.levell.Name = "levell";
-            this.levell.Size = new System.Drawing.Size(62, 22);
+            this.levell.Size = new System.Drawing.Size(79, 28);
             this.levell.TabIndex = 58;
             this.levell.Text = "Level: ";
             // 
@@ -677,7 +677,7 @@ namespace ProjectVizuelno
             this.levelname.Font = new System.Drawing.Font("Cambria", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.levelname.Location = new System.Drawing.Point(12, 598);
             this.levelname.Name = "levelname";
-            this.levelname.Size = new System.Drawing.Size(0, 22);
+            this.levelname.Size = new System.Drawing.Size(0, 28);
             this.levelname.TabIndex = 59;
             // 
             // label6
@@ -686,13 +686,13 @@ namespace ProjectVizuelno
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Location = new System.Drawing.Point(15, 575);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 12);
+            this.label6.Size = new System.Drawing.Size(123, 16);
             this.label6.TabIndex = 60;
             this.label6.Text = "_______________________";
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1182, 673);
@@ -757,8 +757,8 @@ namespace ProjectVizuelno
             this.Font = new System.Drawing.Font("Cambria", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form2_FormClosed);
+            this.Text = "Меморија";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
