@@ -4,6 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Media;
+using System.Runtime.InteropServices.WindowsRuntime;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -22,6 +23,7 @@ namespace ProjectVizuelno
         PictureBox box2;
         Boolean flag;
         Boolean prvSelektiran;
+        Boolean won;
         string firstSelectedValue;
         string secondSelectedValue;
 
@@ -305,6 +307,7 @@ namespace ProjectVizuelno
                                 sw.WriteLine(this.ime + "," + poeni);
                             }
                         }
+                        won = true;
                         this.Dispose();
                     }
                     return;
@@ -424,20 +427,25 @@ namespace ProjectVizuelno
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            timer3.Enabled = false;
-            DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
-            if (dr == DialogResult.Yes)
+            if (!won)
             {
-                timer3.Stop();
-                timer3.Dispose();
-                GC.Collect();
-                this.Dispose();
+                timer3.Enabled = false;
+                DialogResult dr = MessageBox.Show("Дали сте сигурни дека сакате да излезете од моменталната игра?", "Назад", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    timer3.Stop();
+                    timer3.Dispose();
+                    GC.Collect();
+                    this.Dispose();
+                }
+                else
+                {
+                    timer3.Enabled = true;
+                    e.Cancel = true;
+                }
             }
             else
-            {
-                timer3.Enabled = true;
-                e.Cancel = true;
-            }
+                won = false;
         }
     }
 }
